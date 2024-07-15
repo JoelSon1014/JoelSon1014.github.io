@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Joel Son Portfolio</title>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="index.html_0">Joel Son</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check">
+      <ul>
+        <li><a href="#projects-section" class="portfolio-link">Portfolio</a></li>
+        <li><a href="#contact-section" class="contact-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" id="intro-section">
+    <div class="section__container">
+      <div class="content">
+        <p class="subtitle">HELLO</p>
+        <h1 class="title">
+          I'm <span>Joel<br>a</span> Software Engineer
+        </h1>
+        <p class="description">
+          Welcome to my portfolio! I'm Joel, a passionate and driven software engineer who loves tackling challenges.
+          I've worked on a variety of projects that I hope you'll find intriguing. Explore my work and see what I've been up to!
+        </p>
+        <div class="action__btns">
+          <a href="images/Joel Son Resume.pdf" target="_blank">
+            <button class="hire__me">Resume</button>
+          </a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="images/ProfilePicturePhoto (1).jpg" alt="profile">
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills-section">
+    <h2 class="skill-header">My Top Skills</h2>
+    <div class="skills-wrapper">
+      <div class="first-set animate__animated animate__pulse">
+        <img src="images/Python-logo-notext.svg.png" alt="" loading="lazy" class="icon icon-card">
+        <img src="images/ISO_C++_Logo.svg.png" alt="" loading="lazy" class="icon icon-card">
+        <img src="images/HTML5_logo_and_wordmark.svg.png" alt="" loading="lazy" class="icon icon-card">
+      </div>
+      <div class="second-set animate__animated animate__pulse">
+        <img src="images/CSS3_logo.svg.png" alt="" loading="lazy" class="icon icon-card">
+        <img src="images/C_Logo.png" alt="" loading="lazy" class="icon icon-card">
+        <img src="images/Git_icon.svg.png" alt="" loading="lazy" class="icon icon-card">
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects-section">
+    <h2 class="projects-title">My Recent Work</h2>
+    <div class="projects-container">
+      <div class="project-container project-card">
+        <a href="https://drive.google.com/file/d/1VDykjSNYqb1lk0Pqegkxym8IKMG_uIyH/view?usp=sharing" target="_blank">
+          <h3 class="project-title">Scalable Search Engine</h3>
+          <p class="project-details">
+            Search engine to rank Wikipedia articles, employing custom multi-threaded MapReduce server, REST API for
+            search results, and Google or Bing-like user interface
+          </p>
+        </a>
+      </div>
+      <div class="project-container project-card">
+        <a href="https://drive.google.com/file/d/1b9zLXvYjFh96dRLfe1sqkUkKk7JPHpCZ/view?usp=sharing" target="_blank">
+          <h3 class="project-title">LingoLink Discord Bot</h3>
+          <p class="project-details">
+            Discord bot enabling global communication across the Internet via translation and text-to-speech commands with googletrans and
+            AWS Polly APIs
+          </p>
+        </a>
+      </div>
+      <div class="project-container project-card">
+        <a href="https://drive.google.com/file/d/1m7IN5AqdMGZR8SJMwDAaoYFP3QhtXhMt/view?usp=sharing" target="_blank">
+          <h3 class="project-title">Instagram Clone</h3>
+          <p class="project-details">
+            Fullstack app with React.js front-end and Flask REST API for modern experience,
+            with infinite scrolling, double-tap to like, and user authentication
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about-section">
+    <div class="about-container">
+      <h2>Contact Me!</h2>
+      <p>Thanks for taking your time to go through my portfolio. I'm currently a student at the University of Michigan, graduating in 2025.
+      Feel free to connect with me on <a href="https://www.linkedin.com/in/joel-son/" target="_blank">LinkedIn</a> or email me at <a href="mailto:joelyson@umich.edu"  target="_blank">joelyson@umich.edu</a>!</p>
+    </div>
+  </section>
+
+  <!-- Social accounts - Fixed to the right -->
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/joel-son/" target="_blank">
+      <img src="images/LinkedIn_icon.svg.png" alt="Linkedin" loading="lazy" class="socicon">
+    </a>
+    <a href="https://github.com/JoelSon1014" target="_blank">
+      <img src="images/Octicons-mark-github.svg" alt="Github" loading="lazy" class="socicon">
+    </a>
+    <a href="mailto:joelyson@umich.edu" target="_blank">
+      <img src="images/email.svg" alt="Email" loading="lazy" class="socicon">
+    </a>
+  </div>
+
+  <!-- Scroll to top button -->
+  <div class="scroll-up" id="scroll-up">
+    <img src="images/arrow-up-circle.svg" class="socicon up-arrow" alt="Scroll Up">
+  </div>
+
+  <!-- Website scripts -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const portfolioLink = document.querySelector('.portfolio-link');
+      const contactLink = document.querySelector('.contact-link');
+      const scrollUpBtn = document.querySelector('.scroll-up');
+      const navHeight = document.querySelector('nav').offsetHeight; // Get the height of the fixed navigation bar
+      const scrollToOffset = 200; // Adjust this value to fine-tune the scroll position
+
+      portfolioLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const projectsSection = document.getElementById('projects-section');
+        const scrollTarget = projectsSection.offsetTop - navHeight - scrollToOffset;
+        window.scrollTo({
+          top: scrollTarget,
+          behavior: 'smooth'
+        });
+      });
+
+      contactLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const contactSection = document.getElementById('about-section');
+        const scrollTarget = contactSection.offsetTop - navHeight - scrollToOffset;
+        window.scrollTo({
+          top: scrollTarget,
+          behavior: 'smooth'
+        });
+      });
+
+      scrollUpBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
